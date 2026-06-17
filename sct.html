@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kushi Fashions</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#333;
+}
+
+/* Navbar */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+    background:transparent;
+    transition:0.4s;
+    z-index:1000;
+}
+
+nav.scrolled{
+    background:#111827;
+    box-shadow:0 2px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+}
+
+.logo span{
+    color:#00d4ff;
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+}
+
+.nav-links li{
+    margin-left:30px;
+}
+
+.nav-links a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+    padding:8px 12px;
+}
+
+.nav-links a:hover{
+    background:#00d4ff;
+    color:#111;
+    border-radius:5px;
+}
+
+/* Hero */
+.hero{
+    height:100vh;
+    background:linear-gradient(rgba(0,0,0,.6),
+    rgba(0,0,0,.6)),
+    url('https://images.unsplash.com/photo-1483985988355-763728e1935?q=80&w=1200');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:white;
+}
+
+.hero-content h1{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.hero-content p{
+    font-size:22px;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#00d4ff;
+    color:#111;
+    text-decoration:none;
+    border-radius:30px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* Collection Section */
+.collection{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:40px;
+    color:#111827;
+}
+
+.products{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+    transition:0.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+    text-align:center;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+}
+
+.price{
+    color:#00a3cc;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* About */
+.about{
+    padding:80px 8%;
+    background:#111827;
+    color:white;
+    text-align:center;
+}
+
+.about h2{
+    margin-bottom:20px;
+    font-size:40px;
+}
+
+/* Footer */
+footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .nav-links{
+        gap:10px;
+        font-size:14px;
+    }
+
+    .nav-links li{
+        margin-left:10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+    <div class="logo"><img src="https://cdn.vectorstock.com/i/500p/36/96/initial-letter-k-zipper-logo-for-fashion-cloth-vector-44033696.jpg" height=125 width=175></div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collection">Collection</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h1>Welcome to KUSHI Fashions</h1>
+        <p>Style That Speaks For You</p>
+        <a href="#collection" class="btn">Shop Now</a>
+    </div>
+</section>
+
+<!-- Collection -->
+<section class="collection" id="collection">
+
+    <h2 class="section-title">Trending Dresses</h2>
+
+    <div class="products">
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?q=80&w=800" alt="">
+            <div class="card-content">
+                <h3>Casual Summer Dress</h3>
+                <p class="price">₹999</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=800" alt="">
+            <div class="card-content">
+                <h3>Designer Party Wear</h3>
+                <p class="price">₹1,499</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1485230895905-ec40ba36b9bc?q=80&w=800" alt="">
+            <div class="card-content">
+                <h3>Modern Ethnic Dress</h3>
+                <p class="price">₹1,799</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800" alt="">
+            <div class="card-content">
+                <h3>Premium Fashion Wear</h3>
+                <p class="price">₹2,299</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+    <h2>About KUSHI Fashions</h2>
+    <p>
+        KUSHI Fashions offers trendy and stylish clothing collections
+        for every occasion. We provide premium quality fashion
+        at affordable prices with modern designs that make you stand out.
+    </p>
+</section>
+
+<!-- Contact -->
+<section class="about" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: KUSHIfashions@gmail.com</p>
+    <p>Phone: +91 8125074597</p>
+</section>
+
+<footer>
+    <p>© 2026 Kushi Fashions. All Rights Reserved.</p>
+</footer>
+
+<script>
+window.addEventListener("scroll", function(){
+    let navbar = document.getElementById("navbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+</script>
+
+</body>
+</html>
